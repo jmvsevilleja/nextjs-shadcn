@@ -1,34 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import Link from "next/link";
-import { Zap, Mail, Lock, User, ArrowLeft } from "lucide-react";
+import { Mail, Lock, User } from "lucide-react";
 
 export default function SignUp() {
   return (
-    <div className="min-h-screen bg-background flex">
-      {/* Left Side - Form */}
-      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-sm">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <Link href="/" className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">Back to home</span>
-            </Link>
-            <ThemeToggle />
-          </div>
-
-          {/* Logo */}
-          <div className="flex items-center space-x-2 mb-8">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-bold text-xl">SaaSify</span>
-          </div>
-
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
+      
+      <div className="flex-1 flex items-center justify-center px-4 py-12">
+        <div className="w-full max-w-md">
           {/* Form Header */}
-          <div className="mb-8">
-            <h1 className="text-2xl font-bold mb-2">Create your account</h1>
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold mb-2">Create your account</h1>
             <p className="text-muted-foreground">
               Start your 14-day free trial today
             </p>
@@ -161,34 +146,7 @@ export default function SignUp() {
         </div>
       </div>
 
-      {/* Right Side - Image/Branding */}
-      <div className="hidden lg:flex lg:flex-1 bg-muted/30 items-center justify-center p-8">
-        <div className="max-w-md text-center">
-          <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <Zap className="w-8 h-8 text-primary-foreground" />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">
-            Start building today
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Join thousands of developers and businesses who trust SaaSify to power their applications.
-          </p>
-          <div className="space-y-2 text-sm text-muted-foreground">
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>14-day free trial</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>No credit card required</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>Cancel anytime</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

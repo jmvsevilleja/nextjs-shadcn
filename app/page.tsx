@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import Link from "next/link";
 import { 
   CheckCircle, 
   Star, 
   ArrowRight, 
-  Zap, 
   Shield, 
   Users,
   BarChart3,
@@ -16,39 +16,7 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-bold text-xl">SaaSify</span>
-          </div>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Features
-            </Link>
-            <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
-            </Link>
-            <Link href="/demo" className="text-muted-foreground hover:text-foreground transition-colors">
-              Demo
-            </Link>
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Link href="/auth/signin">
-              <Button variant="ghost" size="sm">Sign In</Button>
-            </Link>
-            <Link href="/auth/signup">
-              <Button size="sm">Get Started</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -257,55 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 border-t border-border/40">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <span className="font-bold text-xl">SaaSify</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                The complete SaaS starter template for modern applications.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="#features" className="hover:text-foreground transition-colors">Features</Link></li>
-                <li><Link href="#pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
-                <li><Link href="/demo" className="hover:text-foreground transition-colors">Demo</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="#" className="hover:text-foreground transition-colors">About</Link></li>
-                <li><Link href="#" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li><Link href="#" className="hover:text-foreground transition-colors">Careers</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="#" className="hover:text-foreground transition-colors">Help Center</Link></li>
-                <li><Link href="#" className="hover:text-foreground transition-colors">Contact</Link></li>
-                <li><Link href="#" className="hover:text-foreground transition-colors">Privacy</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-border/40 mt-8 pt-8 text-center text-sm text-muted-foreground">
-            © 2025 SaaSify. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

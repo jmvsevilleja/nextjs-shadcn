@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import Link from "next/link";
 import {
-  Zap,
   ArrowLeft,
   Play,
   Pause,
@@ -31,34 +31,7 @@ export default function Demo() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">Back to home</span>
-            </Link>
-
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-xl">SaaSify Demo</span>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Link href="/auth/signup">
-              <Button size="sm">Get Started</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="container mx-auto px-4 py-8">
         {/* Demo Header */}
@@ -391,6 +364,8 @@ export default function Demo() {
           </Link>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }
