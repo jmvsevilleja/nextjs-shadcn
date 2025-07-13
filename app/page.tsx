@@ -10,7 +10,8 @@ import {
   Users,
   BarChart3,
   Globe,
-  Mail
+  Mail,
+  Zap
 } from "lucide-react";
 
 export default function Home() {
