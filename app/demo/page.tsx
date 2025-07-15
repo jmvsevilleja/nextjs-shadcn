@@ -5,7 +5,6 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
 import {
-  ArrowLeft,
   Play,
   Pause,
   RotateCcw,
@@ -122,9 +121,7 @@ export default function Demo() {
                 <div className="w-64 bg-card border-r border-border flex flex-col">
                   <div className="p-6 border-b border-border">
                     <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                        <Zap className="w-5 h-5 text-primary-foreground" />
-                      </div>
+                      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center"></div>
                       <span className="font-bold text-xl">SaaSify</span>
                     </div>
                   </div>
@@ -364,7 +361,7 @@ export default function Demo() {
           </Link>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
